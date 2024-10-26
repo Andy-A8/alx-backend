@@ -67,6 +67,6 @@ class Server:
 
         try:
             start, end = index_range(page, page_size)
-            return dara[start:end]
+            return data[start:end]
         except IndexError:
             return []
