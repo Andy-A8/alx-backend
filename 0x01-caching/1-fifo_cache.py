@@ -35,9 +35,7 @@ class FIFOCache(BaseCaching):
 
     def put(self, key, item):
         """Assign item to the cache_data dictionary with the given key"""
-        if key is None and item is None:
-            pass
-        else:
+        if key is not None and item is not None:
             """If the cache exceeds the limit, remove the oldest(first) item"""
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                 first_key = self.order.pop(0)
