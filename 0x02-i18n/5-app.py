@@ -48,7 +48,7 @@ def before_request() -> None:
 
 @babel.localeselector
 def get_locale():
-    """ Retrievse the locale of a web page """
+    """ Retrieve the locale of a web page """
     locale = request.args.get("locale")
     if locale in app.config["LANGUAGES"]:
         print(locale)
@@ -60,7 +60,7 @@ def get_locale():
 @app.route('/')
 def index():
     """ Home/index page """
-    return render_template('3-index.html')
+    return render_template('5-index.html')
 
 
 if __name__ == '__main__':
